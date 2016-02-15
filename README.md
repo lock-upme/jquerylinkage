@@ -23,7 +23,7 @@
 			
 #引用方法
 
-  $('#prov').lockLinkage({
+	$('#prov').lockLinkage({
     	sobj : 'city',
     	pdefval : '河北',
     	sdefval : '秦皇岛'
