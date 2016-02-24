@@ -28,8 +28,8 @@
 				$(e.target).addClass(opts.css).parents().removeClass(opts.css);
 			}
 			sobj.empty();
-			$.each(datajson[index].cities,function(i,city) {
-				sobj.append('<'+opts.element+' value='+city+'>'+city+'</'+opts.element+'>');
+			$.each(datajson[index].datas,function(i,val) {
+				sobj.append('<'+opts.element+' value='+val+'>'+val+'</'+opts.element+'>');
 			});
 		};
 		
@@ -54,7 +54,7 @@
 			//二级
 			if (obj.val()) {
 				var index = opts.sdefval == null ? 0 : opts.element == 'option' ? obj.get(0).selectedIndex : obj.find(':contains('+obj.val()+')').index();
-				$.each(datajson[index].cities,function(i, val) {
+				$.each(datajson[index].datas,function(i, val) {
 					sobj.append('<'+opts.element+' value='+val+'>'+val+'</'+opts.element+'>');
 				});
 				//二级默认值
